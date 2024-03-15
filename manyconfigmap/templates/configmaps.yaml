@@ -1,0 +1,12 @@
+{{- range $i, $k8s_namespace := .Values.namespaces }}
+{{- range $j, $k8s_name := $.Values.names }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "{{ $k8s_name }}"
+  namespace: "{{ $k8s_namespace }}"
+data:
+  ns: "{{ $k8s_namespace }}"
+  name: "{{ $k8s_name }}"
+{{- end }}
+{{- end }}

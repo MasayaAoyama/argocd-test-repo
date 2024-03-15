@@ -1,0 +1,25 @@
+{{- range $i, $k8s_namespace := .Values.namespaces }}
+{{- range $j, $k8s_name := $.Values.names }}
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: "{{ $k8s_namespace }}-{{ $k8s_name }}"
+rules:
+- apiGroups:
+  - apps
+  - extensions
+  resources:
+  - replicasets
+  - deployments
+  verbs:
+  - get
+  - list
+  - watch
+- nonResourceURLs:
+  - /healthz
+  - /healthz/*
+  - /version
+  verbs:
+  - get
+{{- end }}
+{{- end }}
