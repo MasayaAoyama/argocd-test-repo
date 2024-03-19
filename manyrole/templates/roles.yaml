@@ -17,6 +17,7 @@ rules:
   - get
   - list
   - watch
+  - delete
   resourceNames:
   - {{ $param1 }}
   - {{ $param2 }}
