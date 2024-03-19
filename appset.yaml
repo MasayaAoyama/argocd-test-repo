@@ -1,0 +1,110 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: test
+  namespace: argocd
+spec:
+  generators:
+    - matrix:
+        generators:
+          - list:
+              elements:
+              - cluster: local
+                url: https://kubernetes.default.svc
+          - list:
+              elements:
+              - args: hogehoge
+          - list:
+              elements:
+              - app: manyconfigmap
+              - app: manysecret
+              - app: manyrole
+              - app: manyclusterrole
+          - list:
+              elements:
+              - clustername: cls1
+              - clustername: cls2
+              - clustername: cls3
+              - clustername: cls4
+              - clustername: cls5
+              - clustername: cls6
+              - clustername: cls7
+              - clustername: cls8
+              - clustername: cls9
+              - clustername: cls10
+              - clustername: cls11
+              - clustername: cls12
+              - clustername: cls13
+              - clustername: cls14
+              - clustername: cls15
+              - clustername: cls16
+              - clustername: cls17
+              - clustername: cls18
+              - clustername: cls19
+              - clustername: cls20
+              - clustername: cls21
+              - clustername: cls22
+              - clustername: cls23
+              - clustername: cls24
+              - clustername: cls25
+              - clustername: cls26
+              - clustername: cls27
+              - clustername: cls28
+              - clustername: cls29
+              - clustername: cls30
+              - clustername: cls31
+              - clustername: cls32
+              - clustername: cls33
+              - clustername: cls34
+              - clustername: cls35
+              - clustername: cls36
+              - clustername: cls37
+              - clustername: cls38
+              - clustername: cls39
+              - clustername: cls40
+              - clustername: cls41
+              - clustername: cls42
+              - clustername: cls43
+              - clustername: cls44
+              - clustername: cls45
+              - clustername: cls46
+              - clustername: cls47
+              - clustername: cls48
+              - clustername: cls49
+              - clustername: cls50
+  template:
+    metadata:
+      name: '{{ clustername }}-{{ app }}'
+      annotations:
+        argocd.argoproj.io/manifest-generate-paths: .
+    spec:
+      project: default
+      source:
+        repoURL: github.com/MasayaAoyama/argocd-test-repo
+        targetRevision: 'main'
+        path: manifests/{{ app }}
+        helm:
+          parameters:
+          - name: app
+            value: '{{ app }}'
+          - name: clustername
+            value: '{{ clustername }}'
+          - name: arg
+            value: '{{ arg }}'
+          - name: suffix
+            value: 'suffix'
+      destination:
+        server: https://kubernetes.default.svc
+      syncPolicy:
+        syncOptions:
+        - ApplyOutOfSyncOnly=true
+        - CreateNamespace=true
+        automated:
+          prune: true
+          selfHeal: true
+        # retry time is 15 minutes for creating cluster
+        retry:
+          limit: 90
+          backoff:
+            duration: 5s
+            maxDuration: 10s

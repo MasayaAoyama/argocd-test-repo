@@ -1,17 +1,19 @@
-namespaces:
-- ns1
-- ns2
-- ns3
-- ns4
-- ns5
-- ns6
-- ns7
-- ns8
-- ns9
-- ns10
-names:
-- my1
-- my2
-- my3
-- my4
-- my5
+params1:
+- par1-1
+- par1-2
+- par1-3
+- par1-4
+- par1-5
+- par1-6
+- par1-7
+- par1-8
+- par1-9
+- par1-10
+params2:
+- par2-1
+- par2-2
+- par2-3
+arg: "default"
+app: ""
+clustername: ""
+suffix: "suffix"

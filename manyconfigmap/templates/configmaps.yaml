@@ -1,12 +1,16 @@
-{{- range $i, $k8s_namespace := .Values.namespaces }}
-{{- range $j, $k8s_name := $.Values.names }}
+{{- range $i, $param1 := .Values.params1 }}
+{{- range $j, $param2 := $.Values.params2 }}
+---
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: "{{ $k8s_name }}"
-  namespace: "{{ $k8s_namespace }}"
+  name: "{{ $param1 }}-{{ $param2 }}-{{ $.Values.suffix }}"
 data:
-  ns: "{{ $k8s_namespace }}"
-  name: "{{ $k8s_name }}"
+  param1: "{{ $param1 }}"
+  param2: "{{ $param2 }}"
+  arg: "{{ $.Values.arg }}"
+  combine: "{{ $param1 }}-{{ $param2 }}-{{ $.Values.arg }}"
+  app: "{{ $.Values.app }}"
+  clustername: "{{ $.Values.clustername }}"
 {{- end }}
 {{- end }}

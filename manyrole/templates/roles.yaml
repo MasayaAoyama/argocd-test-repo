@@ -1,10 +1,10 @@
-{{- range $i, $k8s_namespace := .Values.namespaces }}
-{{- range $j, $k8s_name := $.Values.names }}
+{{- range $i, $param1 := .Values.params1 }}
+{{- range $j, $param2 := $.Values.params2 }}
+---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  name: "{{ $k8s_name }}"
-  namespace: "{{ $k8s_namespace }}"
+  name: "{{ $param1 }}-{{ $param2 }}-{{ $.Values.suffix }}"
 rules:
 - apiGroups:
   - apps
@@ -16,6 +16,12 @@ rules:
   - get
   - list
   - watch
+  resourceNmaes:
+  - {{ $param1 }}
+  - {{ $param2 }}
+  - {{ $.Values.app }}
+  - {{ $.Values.clustername }}
+  - {{ $.Values.arg }}
 - nonResourceURLs:
   - /healthz
   - /healthz/*
