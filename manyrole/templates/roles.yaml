@@ -22,11 +22,5 @@ rules:
   - {{ $.Values.app }}
   - {{ $.Values.clustername }}
   - {{ $.Values.arg }}
-- nonResourceURLs:
-  - /healthz
-  - /healthz/*
-  - /version
-  verbs:
-  - get
 {{- end }}
 {{- end }}
