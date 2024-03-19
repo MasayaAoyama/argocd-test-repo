@@ -16,7 +16,7 @@ rules:
   - get
   - list
   - watch
-  resourceNmaes:
+  resourceNames:
   - {{ $param1 }}
   - {{ $param2 }}
   - {{ $.Values.app }}
