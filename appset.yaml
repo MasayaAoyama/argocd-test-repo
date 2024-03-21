@@ -10,13 +10,13 @@ spec:
           - list:
               elements:
               - app: manyconfigmap
-                arg: fuga
+                arg: fuga2
               - app: manysecret
-                arg: fuga
+                arg: fuga2
               - app: manyrole
-                arg: fuga
+                arg: fuga2
               - app: manyclusterrole
-                arg: fuga
+                arg: fuga2
           - list:
               elements:
               - cluster: local

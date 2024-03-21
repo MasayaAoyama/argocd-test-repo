@@ -19,6 +19,7 @@ rules:
   - watch
   - delete
   resourceNames:
+  - hoge3
   - {{ $param1 }}
   - {{ $param2 }}
   - {{ $.Values.app }}
