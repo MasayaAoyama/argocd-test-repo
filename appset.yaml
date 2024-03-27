@@ -210,16 +210,28 @@ spec:
         repoURL: https://github.com/MasayaAoyama/argocd-test-repo
         targetRevision: 'main'
         path: '{{ app }}'
-        helm:
-          parameters:
-          - name: app
+        plugin:
+          name: ake-env-replace
+          env:
+          - name: APP
             value: '{{ app }}'
-          - name: clustername
+          - name: CLUSTERNAME
             value: '{{ clustername }}'
-          - name: arg
+          - name: ARG
             value: '{{ arg }}'
-          - name: suffix
+          - name: SUFFIX
             value: 'suffix'
+
+        # helm:
+        #   parameters:
+        #   - name: app
+        #     value: '{{ app }}'
+        #   - name: clustername
+        #     value: '{{ clustername }}'
+        #   - name: arg
+        #     value: '{{ arg }}'
+        #   - name: suffix
+        #     value: 'suffix'
       destination:
         server: https://kubernetes.default.svc
         namespace: '{{ clustername }}'
