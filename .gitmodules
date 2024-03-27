@@ -1,3 +1,6 @@
 [submodule "manyconfigmap/argo-cd"]
 	path = manyconfigmap/argo-cd
 	url = https://github.com/argoproj/argo-cd.git
+[submodule "manysecret/kubernetes"]
+	path = manysecret/kubernetes
+	url = https://github.com/kubernetes/kubernetes.git
