@@ -4,3 +4,6 @@
 [submodule "manysecret/kubernetes"]
 	path = manysecret/kubernetes
 	url = https://github.com/kubernetes/kubernetes.git
+[submodule "manyconfigmap/istio"]
+	path = manyconfigmap/istio
+	url = https://github.com/istio/istio.git

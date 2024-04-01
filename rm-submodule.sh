@@ -1,4 +1,4 @@
-git submodule deinit manyconfigmap/argo-cd
+git submodule deinit manyconfigmap/istio
 git submodule deinit manysecret/kubernetes
-rm -rf manyconfigmap/argo-cd
+rm -rf manyconfigmap/istio
 rm -rf manysecret/kubernetes

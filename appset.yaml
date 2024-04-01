@@ -11,12 +11,16 @@ spec:
               elements:
               - app: manyconfigmap
                 arg: fuga2
+                branch: main2
               - app: manysecret
                 arg: fuga2
+                branch: main2
               - app: manyrole
                 arg: fuga2
+                branch: main
               - app: manyclusterrole
                 arg: fuga2
+                branch: main
           - list:
               elements:
               - cluster: local
@@ -34,171 +38,171 @@ spec:
               - cluster: local
                 url: https://kubernetes.default.svc
                 clustername: cls5
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls6
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls7
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls8
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls9
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls10
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls11
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls12
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls13
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls14
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls15
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls16
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls17
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls18
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls19
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls20
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls21
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls22
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls23
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls24
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls25
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls26
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls27
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls28
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls29
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls30
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls31
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls32
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls33
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls34
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls35
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls36
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls37
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls38
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls39
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls40
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls41
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls42
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls43
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls44
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls45
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls46
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls47
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls48
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls49
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls50
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls51
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls52
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls53
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls54
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls55
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls56
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls57
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls58
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls59
-              - cluster: local
-                url: https://kubernetes.default.svc
-                clustername: cls60
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls6
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls7
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls8
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls9
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls10
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls11
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls12
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls13
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls14
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls15
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls16
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls17
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls18
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls19
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls20
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls21
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls22
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls23
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls24
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls25
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls26
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls27
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls28
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls29
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls30
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls31
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls32
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls33
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls34
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls35
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls36
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls37
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls38
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls39
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls40
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls41
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls42
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls43
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls44
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls45
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls46
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls47
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls48
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls49
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls50
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls51
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls52
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls53
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls54
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls55
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls56
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls57
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls58
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls59
+              # - cluster: local
+              #   url: https://kubernetes.default.svc
+              #   clustername: cls60
   template:
     metadata:
       name: '{{ clustername }}-{{ app }}'
@@ -208,7 +212,7 @@ spec:
       project: default
       source:
         repoURL: https://github.com/MasayaAoyama/argocd-test-repo
-        targetRevision: 'main'
+        targetRevision: '{{ branch }}'
         path: '{{ app }}'
         plugin:
           name: ake-env-replace
