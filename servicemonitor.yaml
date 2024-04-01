@@ -1,0 +1,98 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: argocd-metrics
+  namespace: monitoring
+spec:
+  endpoints:
+  - interval: 30s
+    port: metrics
+    scheme: http
+  jobLabel: app.kubernetes.io/name
+  namespaceSelector:
+    matchNames:
+    - argocd
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: metrics
+      app.kubernetes.io/name: argocd-metrics
+      app.kubernetes.io/part-of: argocd
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: argocd-repo-server
+  namespace: monitoring
+spec:
+  endpoints:
+  - interval: 30s
+    port: metrics
+    scheme: http
+  jobLabel: app.kubernetes.io/name
+  namespaceSelector:
+    matchNames:
+    - argocd
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: repo-server
+      app.kubernetes.io/name: argocd-repo-server
+      app.kubernetes.io/part-of: argocd
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: argocd-server-metrics
+  namespace: monitoring
+spec:
+  endpoints:
+  - interval: 30s
+    port: metrics
+    scheme: http
+  jobLabel: app.kubernetes.io/name
+  namespaceSelector:
+    matchNames:
+    - argocd
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: server
+      app.kubernetes.io/name: argocd-server-metrics
+      app.kubernetes.io/part-of: argocd
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: argocd-applicationset-controller
+  namespace: monitoring
+spec:
+  endpoints:
+  - interval: 30s
+    port: metrics
+    scheme: http
+  jobLabel: app.kubernetes.io/name
+  namespaceSelector:
+    matchNames:
+    - argocd
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/name: argocd-applicationset-controller
+      app.kubernetes.io/part-of: argocd-applicationset
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: argocd-notifications-controller-metrics
+  namespace: monitoring
+spec:
+  endpoints:
+  - interval: 30s
+    port: metrics
+    scheme: http
+  jobLabel: app.kubernetes.io/name
+  namespaceSelector:
+    matchNames:
+    - argocd
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: argocd-notifications-controller-metrics
+
