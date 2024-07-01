@@ -12,6 +12,6 @@ data:
   combine: "{{ $param1 }}-{{ $param2 }}-{{ $.Values.arg }}"
   app: "{{ $.Values.app }}"
   clustername: "{{ $.Values.clustername }}"
-  fuga: hoge3
+  fuga: hoge4
 {{- end }}
 {{- end }}
